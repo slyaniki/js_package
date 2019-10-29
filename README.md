@@ -12,19 +12,19 @@ installation
 
 ## Effectuer une requette GET ##
 
-` const axios = require('axios');
+```bash const axios = require('axios');
 
 axios.get('http://webcode.me').then(resp => {
 
     console.log(resp.data);
-});`
+});```
   
     
     
 
   ## Axios requette GET async/await ##
 
-`const axios = require('axios');
+```bash const axios = require('axios');
 
 async function makeGetRequest() {
   
@@ -33,12 +33,12 @@ async function makeGetRequest() {
   let data = res.data;
   console.log(data);
 }
-GetRequest(); `  
+GetRequest(); ```
   
   
  ## Axios  API consommation ##
  get(), post(), ou  delete() 
-
+```bash
 basic_api.js
 
 `const axios = require('axios');
@@ -55,12 +55,12 @@ async function makeRequest() {
     console.log(res.status)
 }
 
-Request();`  
+Request();``` 
   
   
 ## Effectuer une POSTdemande##
- 
- `const axios = require('axios');
+```bash 
+ const axios = require('axios');
 async function makePostRequest() {
     let res = await axios.post('https://jsonplaceholder.typicode.com/posts');
     console.log(`Status code: ${res.status}`);
@@ -72,9 +72,9 @@ async function makePostRequest() {
     console.log(`Data: ${res.data}`);
 }
 
-makePostRequest();`
+makePostRequest();
   
-  
+  ```
   
   ##socket io##
   
@@ -87,7 +87,7 @@ makePostRequest();`
  
  ##initialisation##
  
- `<script> 
+ ```bash <script> 
   let socket = io();
   socket.emit('message');
   socket.on('message,(data)=>{
@@ -95,7 +95,7 @@ makePostRequest();`
   });
   
  
- </script>`
+ </script>```
  
  
  ##express session##
@@ -106,7 +106,7 @@ makePostRequest();`
  
  ##initialiser 
  
- `  router.route("/actu")
+ ```bash  router.route("/actu")
    .get((req,res)=>{
        if(req.session.enligne)
             res.render('actu.ejs')
@@ -114,13 +114,13 @@ makePostRequest();`
             res.status(404).send("err")
      })
       
-module.exports = router; `
+module.exports = router; ```
  
   ## annyang js 
   
   un package utiliser pour l'activation des commandes vocaux.
   
-  ` <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+  ```bash <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
 <script>
 if (annyang) {
   // Let's define a command.
@@ -134,7 +134,7 @@ if (annyang) {
   // Start listening.
   annyang.start();
 }
-</script> ` 
+</script> ``` 
 
 
 ## validator js
@@ -143,7 +143,7 @@ if (annyang) {
 Utilisation côté serveur
 Installez la bibliothèque avec `npm install validator`
 
-` var validator =  require ( ' validator ' ); validateur . isEmail ( ' foo@bar.com ' ); // => true  `  
+```bash var validator =  require ( ' validator ' ); validateur . isEmail ( ' foo@bar.com ' ); // => true  `  
 
 ## Utilisation côté client
 La bibliothèque peut être chargée en tant que script autonome ou via un chargeur compatible avec AMD.
@@ -151,4 +151,4 @@ La bibliothèque peut être chargée en tant que script autonome ou via un charg
 < script  type = " text / javascript "  src = " validator.min.js " > </ script > 
 < script  type = " text / javascript " >
   validateur . isEmail ( ' foo@bar.com ' ); // => true
-</ script > `
+</ script > ```
